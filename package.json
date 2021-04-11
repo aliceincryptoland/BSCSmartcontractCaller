@@ -1,0 +1,25 @@
+{
+  "name": "nw.js-examples",
+  "version": "1.0.0",
+  "description": "Simple smartcontract function caller on BSC",
+  "license": "AGPL-3.0-or-later",
+  "author": {
+    "name": "Alice in Cryptoland",
+    "url": "https://github.com/aliceincryptoland/"
+  },
+  "repository": {
+    "url": "https://github.com/aliceincryptoland/BSCSmartcontractCaller.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/aliceincryptoland/BSCSmartcontractCaller/issues"
+  },
+  "scripts": {
+    "dev": "nw src/",
+    "prod": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
+  },
+  "devDependencies": {
+    "nw": "^0.52.2",
+    "nw-builder": "^3.5.7"
+  }
+}
