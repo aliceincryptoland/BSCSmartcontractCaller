@@ -1,0 +1,12 @@
+{
+  "name": "bsc-smartcontract-caller",
+  "main": "./index.html",
+  "version": "1.0.0",
+  "description": "Simple smartcontract function caller on BSC",
+  "window": {
+    "height": 540,
+    "resizable": true,
+    "width": 960,
+    "title": "BSC Smartcontract Caller"
+  }
+}
