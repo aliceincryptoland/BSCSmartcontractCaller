@@ -1,0 +1,10 @@
+{
+  "secrets": {
+    "privatekey": "Test",
+    "bscscanApiKey": "MY BSCSCAN API KEY"
+  },
+  "parameters": {
+    "rpc-endpoint-url": "https://bsc-dataseed.binance.org/",
+    "contractAddress": "0x0"
+  }
+}

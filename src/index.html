@@ -1,24 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-
   <head>
-    <meta charset="utf-8">
-    <meta name="description" content="BSC Smartcontract Caller">
-    <meta name="author" content="Alice In Cryptoland">
+    <meta charset="utf-8" />
+    <meta name="description" content="BSC Smartcontract Caller" />
+    <meta name="author" content="Alice In Cryptoland" />
 
     <title>BSC Smartcontract Caller</title>
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css?v=1.0" />
   </head>
 
   <body>
-    <div id="anchor"></div>
-      <input type="file" id="parameters" name="fileParameters">
-      <input type="file" id="secrets" name="fileSecrets">
-      <input type="submit" id="submit">
-    <script type="module" src="js/config.mjs"></script>
+    <div id="headers"></div>
+    <br />
+    <input type="file" id="inputFile" accept=".json" />
+    <br />
+    <div id="loadedConfig"></div>
+    <br />
+    <input type="submit" id="execute" name="e" />
+    <br />
+    <div id="results"></div>
     <script type="module" src="js/script.js"></script>
   </body>
-
 </html>

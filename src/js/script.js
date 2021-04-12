@@ -1,40 +1,78 @@
-import {parameters, secrets} from './config.mjs';
-//console.log(parameters);
-const anchor = document.getElementById('anchor');
+const headerNode = document.getElementById("headers");
+const loadedConfigNode = document.getElementById("loadedConfig");
+const resultsNode = document.getElementById("results");
 
-addText("Loading parameters :");
-addText(JSON.stringify(parameters));
-addText("Loading secrets :");
-addText(JSON.stringify(secrets));
-function addText(text){
-    var node = document.createElement("p");
-    var textnode = document.createTextNode(text);
-    node.appendChild(textnode);
-    anchor.appendChild(node);
+const parsed = (jsonText) => JSON.parse(jsonText);
+
+const fileReader = new FileReader();
+
+function handleFileSelect(evt) {
+  fileReader.readAsText(evt.target.files[0]);
 }
 
-const parametersFile = document.getElementById('parameters');
-document.getElementById('submit').addEventListener('click', e => {
-    getObjects();
-});
+fileReader.onload = (e) => {
+  printLoadedConfig(parsed(e.target.result));
+};
 
+document
+  .getElementById("inputFile")
+  .addEventListener("change", handleFileSelect, false);
 
-function getObjects(){
-    // Get the native path of the file selected by user
-    var path = parametersFile.value;
+function printLoadedConfig(config) {
+  removeAllChildNodes(loadedConfigNode);
+  addText(loadedConfigNode, "Loading configuration file : Success");
+  addLineBreak(loadedConfigNode);
+  addLineBreak(loadedConfigNode);
+  addText(loadedConfigNode, "Secrets currently loaded");
+  addLineBreak(loadedConfigNode);
+  prettyPrintJSON(loadedConfigNode, config.secrets);
+  addLineBreak(loadedConfigNode);
+  addLineBreak(loadedConfigNode);
+  addText(loadedConfigNode, "Parameters currently loaded");
+  addLineBreak(loadedConfigNode);
+  prettyPrintJSON(loadedConfigNode, config.parameters);
+  addLineBreak(loadedConfigNode);
+}
 
-    // Read file with Node.js API
-    var fs = nw.require('fs');
-    fs.readFile(path, 'utf8', function(err, txt) {
+function addText(node, text) {
+  var subnode = document.createElement("div");
+  var textnode = document.createTextNode(text);
+  subnode.appendChild(textnode);
+  node.appendChild(subnode);
+}
+function addLineBreak(node) {
+  var lineBreak = document.createElement("br");
+  node.appendChild(lineBreak);
+}
+
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
+
+function prettyPrintJSON(node, json) {
+  Object.keys(json).forEach(function (key) {
+    addText(node, key + "  :  " + json[key]);
+  });
+}
+/*
+function getObjects() {
+  // Get the native path of the file selected by user
+  var path = inputFile.value;
+
+  // Read file with Node.js API
+  var fs = nw.require("fs");
+  fs.readFile(path, "utf8", function (err, txt) {
     if (err) {
-        console.error(err);
-        return;
+      console.error(err);
+      return;
     }
 
     console.log(path);
-    });
+  });
+  return path;
 }
-
 
 /*const PRIVATE_KEY = 
 
