@@ -1,4 +1,23 @@
-body{
-    background-color: black;
-    color: white;
+:root {
+  --contrastedColor: rgb(255, 212, 212);
+}
+
+body {
+  background-color: black;
+  color: var(--contrastedColor);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(255, 234, 208);
+}
+
+hr {
+  background-color: rgb(127, 13, 235);
+}
+
+input {
+  margin-bottom: 1em;
 }

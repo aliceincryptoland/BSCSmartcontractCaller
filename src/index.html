@@ -13,12 +13,14 @@
 
   <body>
     <div id="headers"></div>
+    <div id="secretsHeader"></div>
+    <input type="file" id="inputFileSecrets" accept=".json" />
+    <div id="secretsFile"></div>
+    <div id="parametersHeader"></div>
+    <input type="file" id="inputFileParameters" accept=".json" />
+    <div id="parametersFile"></div>
     <br />
-    <input type="file" id="inputFile" accept=".json" />
-    <br />
-    <div id="loadedConfig"></div>
-    <br />
-    <input type="submit" id="execute" name="e" />
+    <input type="submit" id="execute" value="Execute smartcontract function" />
     <br />
     <div id="results"></div>
     <script type="module" src="js/script.js"></script>

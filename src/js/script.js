@@ -1,38 +1,52 @@
 const headerNode = document.getElementById("headers");
-const loadedConfigNode = document.getElementById("loadedConfig");
+const secretsHeaderNode = document.getElementById("secretsHeader");
+const secretsFileNode = document.getElementById("secretsFile");
+const parametersHeaderNode = document.getElementById("parametersHeader");
+const parametersFileNode = document.getElementById("parametersFile");
+const node = document.getElementById("loadedConfig");
 const resultsNode = document.getElementById("results");
 
 const parsed = (jsonText) => JSON.parse(jsonText);
 
 const fileReader = new FileReader();
 
+var secrets = {};
+var parameters = {};
+addTitle(headerNode, "h2", "Smartcontract Caller");
+addText(headerNode, "Brought to you with care by : Alice in Cryptoland");
+addHLine(headerNode);
+addTitle(headerNode, "h4", "Please input the config files");
+addTitle(secretsHeaderNode, "h3", "Secrets");
+addTitle(parametersHeaderNode, "h3", "Parameters");
+
 function handleFileSelect(evt) {
   fileReader.readAsText(evt.target.files[0]);
+  fileReader.onload = (e) => {
+    if (evt.target.matches("#inputFileSecrets")) {
+      secrets = parsed(e.target.result);
+      removeAllChildNodes(secretsFileNode);
+      addText(secretsFileNode, "Loaded secrets : ");
+      addLineBreak(secretsFileNode);
+      prettyPrintJSON(secretsFileNode, secrets);
+    } else if (evt.target.matches("#inputFileParameters")) {
+      parameters = parsed(e.target.result);
+      removeAllChildNodes(parametersFileNode);
+      addText(parametersFileNode, "Loaded parameters : ");
+      addLineBreak(parametersFileNode);
+      prettyPrintJSON(parametersFileNode, parameters);
+    } else {
+      console.log("error");
+    }
+  };
 }
-
-fileReader.onload = (e) => {
-  printLoadedConfig(parsed(e.target.result));
-};
 
 document
-  .getElementById("inputFile")
+  .getElementById("inputFileSecrets")
   .addEventListener("change", handleFileSelect, false);
 
-function printLoadedConfig(config) {
-  removeAllChildNodes(loadedConfigNode);
-  addText(loadedConfigNode, "Loading configuration file : Success");
-  addLineBreak(loadedConfigNode);
-  addLineBreak(loadedConfigNode);
-  addText(loadedConfigNode, "Secrets currently loaded");
-  addLineBreak(loadedConfigNode);
-  prettyPrintJSON(loadedConfigNode, config.secrets);
-  addLineBreak(loadedConfigNode);
-  addLineBreak(loadedConfigNode);
-  addText(loadedConfigNode, "Parameters currently loaded");
-  addLineBreak(loadedConfigNode);
-  prettyPrintJSON(loadedConfigNode, config.parameters);
-  addLineBreak(loadedConfigNode);
-}
+document
+  .getElementById("inputFileParameters")
+  .addEventListener("change", handleFileSelect, false);
 
 function addText(node, text) {
   var subnode = document.createElement("div");
@@ -43,6 +57,16 @@ function addText(node, text) {
 function addLineBreak(node) {
   var lineBreak = document.createElement("br");
   node.appendChild(lineBreak);
+}
+function addHLine(node) {
+  var hLine = document.createElement("hr");
+  node.appendChild(hLine);
+}
+function addTitle(node, titleType, text) {
+  var subnode = document.createElement(titleType);
+  var textnode = document.createTextNode(text);
+  subnode.appendChild(textnode);
+  node.appendChild(subnode);
 }
 
 function removeAllChildNodes(parent) {
