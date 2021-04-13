@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "description": "Simple smartcontract function caller on BSC",
   "window": {
-    "height": 540,
+    "height": 1080,
+    "width": 1920,
     "resizable": true,
-    "width": 960,
-    "title": "BSC Smartcontract Caller"
+    "title": "Smartcontract Caller"
   }
 }
