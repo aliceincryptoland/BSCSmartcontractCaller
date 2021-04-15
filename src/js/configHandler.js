@@ -24,18 +24,6 @@ export const getRPCURL = () => {
   return url;
 };
 
-export const formatParameters = () => {
-  let params = [];
-  parameters.METHOD_PARAMETERS.forEach((param) => {
-    if (Number.isFinite(param)) {
-      params.push(web3.utils.toWei(param, "ether"));
-    } else {
-      params.push(param);
-    }
-  });
-  return params;
-};
-
 export const keysEqual = (object, array) => {
   return JSON.stringify(Object.keys(object)) === JSON.stringify(array);
 };
