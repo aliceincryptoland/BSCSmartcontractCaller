@@ -39,8 +39,8 @@ All files should be in `JSON` format.
 - `METHOD_PARAMETERS`: All the parameters that are needed to call the fucntion. They should be placed in an array. All parameters of solidity type `address` should be a placed in the array as a `string`, all number types should be written as `int` or `float` and be in **ethers**.
   _e.g. for the method transfer(address,uint256) parameters could be ['0x437C2AD9E62e3f9Ef8d76Dd6Bb1A5deF35B37Cc7', 123]_.
 
-> **N.B.** Except for `METHOD_PARAMETERS` which is an array, all other parameters are of type `string`.
+> Except for `METHOD_PARAMETERS` which is an array, all other parameters are of type `string`.
 
 ### ABI
 
-> Copy-paste the ABI of the contract you wish to call from a blockscanner (e.g. Etherscan, BSCScan, ...). in the templateABI.json file.
+- Copy-paste the ABI of the contract you wish to call from a blockscanner (e.g. Etherscan, BSCScan, ...). in the templateABI.json file.
