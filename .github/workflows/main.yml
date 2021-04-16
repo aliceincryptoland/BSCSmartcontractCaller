@@ -39,6 +39,7 @@ jobs:
           path: dist/smartcontract-caller/win64
       - name: Release artifacts
         uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
             smartcontract-caller-win32
