@@ -27,16 +27,16 @@ All files should be in JSON format.
 
 ### Secrets
 
-'''PRIVATE_KEY''' : the private key that you wish to sign transactions with.
+`PRIVATE_KEY` : the private key that you wish to sign transactions with.
 
 ### Parameters
 
-'BLOCKCHAIN': "'bsc-mainnet' or 'bsc-testnet'",
-'''PUBLIC_ADDRESS''': "your public address",
-'''CONTRACT_ADDRESS''': "e.g. 0xe9e7cea3dedca5984780bafc599bd69add087d56",
-'''METHOD_NAME''': "name of method you want to call with parameter types e.g. 'transfer(address,uint256)'",
-'''METHOD_TYPE''': "the method type : 'read' (does not alter contract state) or 'write' (alters the contract state)",
-'''METHOD_PARAMETERS''': "they should be placed in an array e.g. ' ['0x437C2AD9E62e3f9Ef8d76Dd6Bb1A5deF35B37Cc7', 123]' "
+`BLOCKCHAIN`: "'bsc-mainnet' or 'bsc-testnet'",
+`PUBLIC_ADDRESS`: "your public address",
+`CONTRACT_ADDRESS`: "e.g. 0xe9e7cea3dedca5984780bafc599bd69add087d56",
+`METHOD_NAME`: "name of method you want to call with parameter types e.g. 'transfer(address,uint256)'",
+`METHOD_TYPE`: "the method type : 'read' (does not alter contract state) or 'write' (alters the contract state)",
+`METHOD_PARAMETERS`: "they should be placed in an array e.g. ' ['0x437C2AD9E62e3f9Ef8d76Dd6Bb1A5deF35B37Cc7', 123]' "
 
 ### ABI
 
