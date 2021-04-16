@@ -1,4 +1,4 @@
-# Smartcontract Caller [![GitHub release](/github/v/release/aliceincryptoland/smartcontract-caller/)](https://github.com/aliceincryptoland/smartcontract-caller/releases)
+# Smartcontract Caller [![GitHub release](https://img.shields.io/github/v/release/aliceincryptoland/smartcontract-caller)](https://github.com/aliceincryptoland/smartcontract-caller/releases)
 
 > Disclaimer : This is a badly and quickly written with uneccesary machinery and very client-heavy release.
 
