@@ -75,7 +75,7 @@ export const web3Handle = () => {
                 console.log(receipt);
                 view.addText(
                   view.resultsNode,
-                  "The transaction has been sent, it's hash is : " +
+                  "The transaction has been sent, its hash is : " +
                     receipt.transactionHash
                 );
               });
