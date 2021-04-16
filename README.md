@@ -29,14 +29,18 @@ All files should be in JSON format.
 
 `PRIVATE_KEY` : the private key that you wish to sign transactions with.
 
+> This parameter is of type `string`.
+
 ### Parameters
 
-`BLOCKCHAIN`: "'bsc-mainnet' or 'bsc-testnet'",
-`PUBLIC_ADDRESS`: "your public address",
-`CONTRACT_ADDRESS`: "e.g. 0xe9e7cea3dedca5984780bafc599bd69add087d56",
-`METHOD_NAME`: "name of method you want to call with parameter types e.g. 'transfer(address,uint256)'",
-`METHOD_TYPE`: "the method type : 'read' (does not alter contract state) or 'write' (alters the contract state)",
-`METHOD_PARAMETERS`: "they should be placed in an array e.g. ' ['0x437C2AD9E62e3f9Ef8d76Dd6Bb1A5deF35B37Cc7', 123]' "
+- `BLOCKCHAIN`: Choose the blockchain you wish to connect to. For now the only options are _bsc-mainnet_ or _bsc-testnet_.
+- `PUBLIC_ADDRESS`: Your public address, associated with your private key.
+- `CONTRACT_ADDRESS`: The address of the contract you wish to call.
+- `METHOD_NAME`: Name of method you wish to call. Should include it's solidity parameter types, _e.g. transfer(address,uint256)_.
+- `METHOD_TYPE`: Either _read_ or _write_ . Read methods do not alter contract state (don't need to sign anything or pay fee) whereas write methods do.
+- `METHOD_PARAMETERS`: All the parameters that are needed to call the fucntion. They should be placed in an array. All parameters of solidity type `address` should be a placed in the array as a `string`, all number types should be written as `int` or `float` and be in **ethers** _e.g. for the method transfer(address,uint256) parameters could be ['0x437C2AD9E62e3f9Ef8d76Dd6Bb1A5deF35B37Cc7', 123]_.
+
+> **N.B.** Except for `METHOD_PARAMETERS` which is an array, all other parameters are of type `string`.
 
 ### ABI
 
