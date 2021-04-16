@@ -1,8 +1,8 @@
 {
-  "name": "bsc-smartcontract-caller",
+  "name": "smartcontract-caller",
   "main": "./index.html",
   "version": "1.0.0",
-  "description": "Simple smartcontract function caller on BSC",
+  "description": "Simple smartcontract function caller for EVM compatible blockchains",
   "window": {
     "height": 1080,
     "width": 1920,
