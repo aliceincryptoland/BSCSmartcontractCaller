@@ -1,4 +1,4 @@
-# Smartcontract Caller [![GitHub release](https://img.shields.io/github/v/release/aliceincryptoland/smartcontract-caller)](https://github.com/aliceincryptoland/smartcontract-caller/releases)
+# Smartcontract Caller [![Github workflow] (https://img.shields.io/github/workflow/status/aliceincryptoland/smartcontract-caller/Smartcontract%20Caller%20Build%20&%20Deploy)](https://github.com/aliceincryptoland/smartcontract-caller/actions/workflows/main.yml) [![GitHub release](https://img.shields.io/github/v/release/aliceincryptoland/smartcontract-caller)](https://github.com/aliceincryptoland/smartcontract-caller/releases)
 
 > Disclaimer : This is a badly and quickly written with uneccesary machinery and very client-heavy release.
 
