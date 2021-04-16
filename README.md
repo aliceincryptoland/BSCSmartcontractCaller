@@ -4,8 +4,6 @@
 
 This is a standalone node-webkit app, that enables users to call a contract method on an EVM compatible blockchain from input configuration files.
 
-<hr>
-
 ## Supported Blockchains:
 
 - Binance Smart Chain - Mainnet
