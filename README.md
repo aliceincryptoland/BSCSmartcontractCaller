@@ -1,8 +1,8 @@
-# Smartcontract Caller [![GitHub release](https://github.com/aliceincryptoland/smartcontract-caller/releases:/badge.svg)](https://github.com/aliceincryptoland/smartcontract-caller/releases)
+# Smartcontract Caller [![GitHub release](https://github.com/aliceincryptoland/smartcontract-caller/releases/badge.svg)](https://github.com/aliceincryptoland/smartcontract-caller/releases)
 
 > Disclaimer : This is a badly and quickly written with uneccesary machinery and very client-heavy release.
-> This is a node-webkit app, that enable someone to call a contract method on an EVM compatible blockchain from input configuration files.
-> that enable someone to call a contract method on an EVM compatible blockchain.
+
+This is a node-webkit app, that enables users to call a contract method on an EVM compatible blockchain from input configuration files.
 
 <hr>
 
