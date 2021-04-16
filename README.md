@@ -2,7 +2,7 @@
 
 The **Smartcontract Caller** is a standalone node-webkit app, that enables users to call a contract method on an EVM-compatible blockchain by uploading input configuration files in `JSON` format.
 
-> Disclaimer : This is a badly and quickly written with uneccesary machinery and very client-heavy release.
+> Disclaimer : This is a badly and quickly written project, with uneccesary machinery, and a **very** client-heavy ditribution.
 
 ## Supported Blockchains:
 
