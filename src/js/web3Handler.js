@@ -2,11 +2,11 @@ import * as view from "./viewMethods.js";
 import * as config from "./configHandler.js";
 
 export const web3Handle = () => {
+  let Web3 = require("web3");
+  let web3 = new Web3(config.getRPCURL());
   const toWei = (param) => {
     return web3.utils.toBN(param * Math.pow(10, 18));
   };
-  let Web3 = require("web3");
-  let web3 = new Web3(config.getRPCURL());
   let Accounts = require("web3-eth-accounts");
   const myAccount = web3.eth.accounts.privateKeyToAccount(
     config.secrets.PRIVATE_KEY

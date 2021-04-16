@@ -1,5 +1,5 @@
 {
-  "name": "bsc-smartcontract-caller",
+  "name": "smartcontract-caller",
   "main": "./src/index.html",
   "version": "1.0.0",
   "description": "Simple smartcontract function caller on BSC",
@@ -23,7 +23,7 @@
     "build-lin": "nwbuild --platforms linux32,linux64 --buildDir dist/ src/",
     "build-all": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
   },
-  "devDependencies": {
+  "dependencies": {
     "nw": "^0.52.2",
     "nw-builder": "^3.5.7",
     "web3": "^1.3.5",
