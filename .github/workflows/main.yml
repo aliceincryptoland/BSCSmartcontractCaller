@@ -27,13 +27,11 @@ jobs:
     - run: npm ci
     - run: npm install
     - run: npm run build-win --if-present
-    - name : zip build win32
-      uses: papeloto/action-zip@v1
+    - uses: actions/upload-artifact@v2
       with:
-        files: dist/bsc-smartcontract-caller/win32
-        dest: bsc-smartcontract-caller-win32.zip
-    - name : zip build win64
-      uses: papeloto/action-zip@v1
+        name: bsc-smartcontract-caller-win32
+        path: dist/bsc-smartcontract-caller/win32
+    - uses: actions/upload-artifact@v2
       with:
-        files: dist/bsc-smartcontract-caller/win64
-        dest: bsc-smartcontract-caller-win64.zip
+        name: bsc-smartcontract-caller-win64
+        path: dist/bsc-smartcontract-caller/win64
