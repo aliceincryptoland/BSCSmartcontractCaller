@@ -18,8 +18,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "15.x"
-      - name: Install Node.js dependencies
+      - name: Install Node.js dependencies in root folder
         run: npm ci
+      - name: Install Node.js dependencies in src folder
+        run: |
+          cd src
+          npm install
+          cd ..
       - name: Build win32 and win64 binaries
         run: npm run build-win --if-present
       - name: "Zip : win32"
