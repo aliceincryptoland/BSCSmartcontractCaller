@@ -1,4 +1,4 @@
-name: Smartcontract Caller Build & Deploy
+name: Build & Release
 
 on:
   push:
