@@ -25,8 +25,8 @@ jobs:
           cd src
           npm install
           cd ..
-      - name: Build win32 and win64 binaries
-        run: npm run build-win --if-present
+      - name: Build win32,win64,osx64,linux32,linux64 binaries
+        run: npm run build-all --if-present
       - name: "Zip : win32"
         uses: papeloto/action-zip@v1
         with:
@@ -47,6 +47,36 @@ jobs:
         with:
           name: smartcontract-caller-win64
           path: ${{ github.workspace }}/smartcontract-caller-win64.zip
+      - name: "Zip : osx64"
+        uses: papeloto/action-zip@v1
+        with:
+          files: dist/smartcontract-caller/osx64
+          dest: smartcontract-caller-osx64.zip
+      - name: "Upload artifact : osx64"
+        uses: actions/upload-artifact@v1
+        with:
+          name: smartcontract-caller-osx64
+          path: ${{ github.workspace }}/smartcontract-caller-osx64.zip
+      - name: "Zip : linux32"
+        uses: papeloto/action-zip@v1
+        with:
+          files: dist/smartcontract-caller/linux32
+          dest: smartcontract-caller-linux32.zip
+      - name: "Upload artifact : linux32"
+        uses: actions/upload-artifact@v1
+        with:
+          name: smartcontract-caller-linux32
+          path: ${{ github.workspace }}/smartcontract-caller-linux32.zip
+      - name: "Zip : linux64"
+        uses: papeloto/action-zip@v1
+        with:
+          files: dist/smartcontract-caller/linux64
+          dest: smartcontract-caller-linux64.zip
+      - name: "Upload artifact : linux64"
+        uses: actions/upload-artifact@v1
+        with:
+          name: smartcontract-caller-linux64
+          path: ${{ github.workspace }}/smartcontract-caller-linux64.zip
       - name: "Zip : templates"
         uses: papeloto/action-zip@v1
         with:
@@ -59,6 +89,9 @@ jobs:
           files: |
             ${{ github.workspace }}/smartcontract-caller-win32.zip
             ${{ github.workspace }}/smartcontract-caller-win64.zip
+            ${{ github.workspace }}/smartcontract-caller-osx64.zip
+            ${{ github.workspace }}/smartcontract-caller-linux32.zip
+            ${{ github.workspace }}/smartcontract-caller-linux64.zip
             ${{ github.workspace }}/config-templates.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
