@@ -19,14 +19,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Install dependencies & Build
+      - name: Setup Node 15.x
         uses: actions/setup-node@v1
         with:
           node-version: "15.x"
-        run: |
-          npm ci
-          npm install
-          npm run build-win --if-present
+      - name: Install dependencies
+        run: npm ci
+      - name: Build win32 and win64 binaries
+        run: npm run build-win --if-present
       - name: Upload artifact win32
         uses: actions/upload-artifact@v2
         with:
@@ -37,7 +37,7 @@ jobs:
         with:
           name: smartcontract-caller-win64
           path: dist/smartcontract-caller/win64
-      - name: Release
+      - name: Release artifacts
         uses: softprops/action-gh-release@v1
         with:
           files: |
