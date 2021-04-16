@@ -8,5 +8,10 @@
     "width": 1920,
     "resizable": true,
     "title": "Smartcontract Caller"
+  },
+  "dependencies": {
+    "web3": "^1.3.5",
+    "web3-eth": "^1.3.5",
+    "web3-eth-contract": "^1.3.5"
   }
 }
