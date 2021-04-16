@@ -7,7 +7,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -19,20 +19,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Install dependencies
+      - name: Install dependencies & Build
         uses: actions/setup-node@v1
-          with:
-            node-version: "15.x"
+        with:
+          node-version: "15.x"
         run: |
           npm ci
           npm install
-      - name: Build
-        run: npm run build-win --if-present
-      - name: Upload Artifacts
+          npm run build-win --if-present
+      - name: Upload artifact win32
         uses: actions/upload-artifact@v2
         with:
           name: smartcontract-caller-win32
           path: dist/smartcontract-caller/win32
+      - name: Upload artifact win64
         uses: actions/upload-artifact@v2
         with:
           name: smartcontract-caller-win64
