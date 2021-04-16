@@ -27,4 +27,3 @@ jobs:
     - run: npm ci
     - run: npm install
     - run: npm run build-win --if-present
-    - run: npm test
