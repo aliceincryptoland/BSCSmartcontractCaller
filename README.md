@@ -37,7 +37,7 @@ All files should be in `JSON` format.
 - `METHOD_NAME`: Name of method you wish to call. You should include it's solidity parameter types, _e.g. transfer(address,uint256)_.
 - `METHOD_TYPE`: Either _read_ or _write_ . _Read_ methods do not alter contract state (don't need to sign anything or pay fee) whereas _write_ methods do.
 - `METHOD_PARAMETERS`: All the parameters that are needed to call the fucntion. They should be placed in an array. All parameters of solidity type `address` should be a placed in the array as a `string`, all number types should be written as `int` or `float` and be in **ethers** (the program will multiply by 10^18 to convert it in **wei**).\
-  _e.g. for the method transfer(address,uint256) parameters could be ["0x437C2AD9E62e3f9Ef8d76Dd6Bb1A5deF35B37Cc7", 123]_.
+  _e.g. for the method_ transfer(address,uint256) _parameters could be_ ["0x437C2AD9E62e3f9Ef8d76Dd6Bb1A5deF35B37Cc7", 123].
 
 > Except for `METHOD_PARAMETERS` which is an `Array`, all other parameters are of type `string`.
 
