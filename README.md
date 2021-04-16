@@ -1,8 +1,8 @@
 # Smartcontract Caller ![License](https://img.shields.io/github/license/aliceincryptoland/smartcontract-caller) [![Smartcontract Caller Build & Deploy](https://img.shields.io/github/workflow/status/aliceincryptoland/smartcontract-caller/Build%20&%20Release)](https://github.com/aliceincryptoland/smartcontract-caller/actions/workflows/main.yml) [![GitHub release](https://img.shields.io/github/v/release/aliceincryptoland/smartcontract-caller)](https://github.com/aliceincryptoland/smartcontract-caller/releases)
 
-> Disclaimer : This is a badly and quickly written with uneccesary machinery and very client-heavy release.
+The **Smartcontract Caller** is a standalone node-webkit app, that enables users to call a contract method on an EVM-compatible blockchain by uploading input configuration files in `JSON` format.
 
-This is a standalone node-webkit app, that enables users to call a contract method on an EVM compatible blockchain from input configuration files.
+> Disclaimer : This is a badly and quickly written with uneccesary machinery and very client-heavy release.
 
 ## Supported Blockchains:
 
@@ -13,7 +13,7 @@ This is a standalone node-webkit app, that enables users to call a contract meth
 
 1. Download the latest release. Choose version accordingly.
 1. Unzip the downloaded app folder.
-1. Download the configuration template files (Release>config-template.zip).
+1. Download the configuration template files (Release > config-template.zip).
 1. Edit the configuration templates. References for parameter format are given below.
 1. Launch the .exe in the app folder.
 1. Upload the edited configuration files in the launched app.
@@ -21,7 +21,7 @@ This is a standalone node-webkit app, that enables users to call a contract meth
 
 ## Configuration files format
 
-All files should be in JSON format.
+All files should be in `JSON` format.
 
 ### Secrets
 
