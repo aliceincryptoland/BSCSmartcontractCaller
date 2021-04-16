@@ -27,13 +27,11 @@ All files should be in JSON format.
 
 ### Secrets
 
-This contains :
 '''PRIVATE_KEY''' : the private key that you wish to sign transactions with.
 
 ### Parameters
 
-This contains :
-'''BLOCKCHAIN''': "'bsc-mainnet' or 'bsc-testnet'",
+'BLOCKCHAIN': "'bsc-mainnet' or 'bsc-testnet'",
 '''PUBLIC_ADDRESS''': "your public address",
 '''CONTRACT_ADDRESS''': "e.g. 0xe9e7cea3dedca5984780bafc599bd69add087d56",
 '''METHOD_NAME''': "name of method you want to call with parameter types e.g. 'transfer(address,uint256)'",
@@ -42,4 +40,4 @@ This contains :
 
 ### ABI
 
-Copy-paste the ABI of the contract you wish to call from a blockscanner (e.g. Etherscan, BSCScan, ...). in the templateABI.json file.
+> Copy-paste the ABI of the contract you wish to call from a blockscanner (e.g. Etherscan, BSCScan, ...). in the templateABI.json file.
