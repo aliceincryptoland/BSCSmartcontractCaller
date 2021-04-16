@@ -37,7 +37,7 @@ jobs:
         with:
           files: dist/smartcontract-caller/win64
           dest: smartcontract-caller-win64.zip
-      - name: "Upload artifact : win32"
+      - name: "Upload artifact : win64"
         uses: actions/upload-artifact@v1
         with:
           name: smartcontract-caller-win64
